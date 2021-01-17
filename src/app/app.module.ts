@@ -1,16 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http'
+
+import { HeaderComponent } from './header/header.component';
+import { MovieslistComponent } from './movieslist/movieslist.component';
+import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatInputModule } from '@angular/material/input'
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    MovieslistComponent,
+    MoviedetailsComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

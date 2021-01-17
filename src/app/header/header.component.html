@@ -1,0 +1,38 @@
+<!-- This is the header of the whole app which have logo and search input -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']">WOOKIE<br />MOVIES</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse justify-content-end"
+    id="navbarSupportedContent"
+  >
+    <form
+      class="example-form form-inline my-2 my-lg-0"
+      #myform="ngForm"
+      (ngSubmit)="onSubmit(myform)"
+    >
+      <mat-form-field class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input
+          matInput
+          placeholder="Enter a movie"
+          autocomplete="off"
+          name="search"
+          ngModel
+        />
+      </mat-form-field>
+    </form>
+  </div>
+</nav>

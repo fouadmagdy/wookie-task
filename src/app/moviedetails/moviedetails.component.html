@@ -1,0 +1,38 @@
+<!-- this componennt have the details of the selected movie -->
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<section class="movie-details mt-5" *ngIf="!isLoading">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ backdrop }}" alt="" class="img-fluid" />
+      </div>
+      <div class="col-md-8">
+        <div class="row align-items-center">
+          <div class="col-6 h2">{{ title }} ({{ videoStarValue }})</div>
+          <div class="col-6">
+            <star-rating
+              value="{{ videoStarValue }}"
+              totalstars="{{ totalstar }}"
+              checkedcolor="gold"
+              uncheckedcolor="grey"
+              size="25px"
+              readonly="true"
+            ></star-rating>
+          </div>
+        </div>
+        <h3 class="h3">
+          {{ year.split("-")[0] }} | {{ length }} | {{ director }}
+        </h3>
+        <div *ngFor="let cast of casts" class="h3">
+          <span class="font-weight-bold h4">Cast: </span>
+          <span class="font-weight-light">{{ cast }} </span>
+        </div>
+        <p class="font-weight-bold h4">
+          Movie Description :
+          <span class="font-weight-light h5">{{ description }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,76 @@
+<!-- the movielist component show all the movies and each card have the link of this movie details -->
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="container-fluid" *ngIf="!isLoading">
+  <div *ngIf="actionMovie.length > 0">
+    <h2>Action</h2>
+    <div class="movie-container">
+      <a
+        [routerLink]="['/details', movie.slug]"
+        *ngFor="let movie of actionMovie"
+      >
+        <img src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="animationMovie.length > 0">
+    <h2>Animation</h2>
+    <div class="movie-container">
+      <a
+        [routerLink]="['/details', movie.slug]"
+        *ngFor="let movie of animationMovie"
+      >
+        <img src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="crimeMovie.length > 0">
+    <h2>Crime</h2>
+    <div class="movie-container">
+      <a
+        [routerLink]="['/details', movie.slug]"
+        *ngFor="let movie of crimeMovie"
+      >
+        <img src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="biographyMovie.length > 0">
+    <h2>Biography</h2>
+    <div class="movie-container">
+      <a
+        [routerLink]="['/details', movie.slug]"
+        *ngFor="let movie of biographyMovie"
+      >
+        <img src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="dramaMovie.length > 0">
+    <h2>Drama</h2>
+    <div class="movie-container">
+      <a
+        [routerLink]="['/details', movie.slug]"
+        *ngFor="let movie of dramaMovie"
+      >
+        <img src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="adventureMovie.length > 0">
+    <h2>Adventure</h2>
+    <div class="movie-container">
+      <a
+        [routerLink]="['/details', movie.slug]"
+        *ngFor="let movie of adventureMovie"
+      >
+        <img src="{{ movie.poster }}" alt="{{ movie.title }}" />
+      </a>
+    </div>
+  </div>
+</div>

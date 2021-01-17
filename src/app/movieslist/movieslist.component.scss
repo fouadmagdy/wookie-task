@@ -1,0 +1,20 @@
+.movie-container {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  img {
+    width: 300px;
+    margin: 0.2rem;
+    transition: transform 450ms;
+    padding: 1rem;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+}
